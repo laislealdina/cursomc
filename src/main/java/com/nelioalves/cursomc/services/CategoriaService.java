@@ -29,7 +29,13 @@ public class CategoriaService {
 	
 	public Categoria update(Categoria obj) {
 		find(obj.getId());
-		return repo.save(obj);
+		return repo.save(obj);	
+	}
+	
+	public void delete(Integer id) {
+		Categoria obj = find(id);
+		repo.delete(obj);
 		
-	}	
+	}
+	
 }
